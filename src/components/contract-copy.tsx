@@ -33,10 +33,11 @@ export function ContractCopy({ value }: { value: string }) {
       type="button"
       className="token-copy-btn"
       data-copy={value}
+      data-copied={copied ? "true" : "false"}
       onClick={copy}
       aria-label={copied ? "Contract address copied" : "Copy contract address"}
     >
-      <svg viewBox="0 0 24 24" aria-hidden="true">
+      <svg className="copy-icon" viewBox="0 0 24 24" aria-hidden="true">
         <rect
           x="8"
           y="8"
@@ -54,7 +55,17 @@ export function ContractCopy({ value }: { value: string }) {
           strokeWidth="1.6"
         />
       </svg>
-      <span data-copy-label>{copied ? "Copied" : "Copy"}</span>
+      <svg className="ok-icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M5.2 12.4 10 17.2 18.8 7.2"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+      <span data-copy-label>Copy</span>
     </button>
   );
 }

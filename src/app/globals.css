@@ -621,6 +621,33 @@ button.nav-link {
   height: 0.95rem;
 }
 
+.token-copy-btn .ok-icon {
+  display: none;
+}
+
+.token-copy-btn[data-copied="true"] {
+  width: 2.2rem;
+  height: 2.2rem;
+  justify-content: center;
+  gap: 0;
+  padding: 0;
+  border-color: #ea6829;
+  border-radius: 50%;
+  background: #ea6829;
+  color: #fff;
+}
+
+.token-copy-btn[data-copied="true"] .copy-icon,
+.token-copy-btn[data-copied="true"] [data-copy-label] {
+  display: none;
+}
+
+.token-copy-btn[data-copied="true"] .ok-icon {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
 .token-copy-btn:hover {
   border-color: #ea6829;
   color: #fff;
