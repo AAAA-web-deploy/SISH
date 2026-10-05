@@ -15,12 +15,15 @@ npm run dev
 
 Open [http://127.0.0.1:4317](http://127.0.0.1:4317). Home is `/`. Story is `/story`. Token is `/token`. How to Buy is `/how-to-buy`. Community is `/community`.
 
-## Production build
+## Production
+
+The live site is [https://sish.site](https://sish.site). A push to `main` builds a static export and GitHub Pages publishes it.
 
 ```bash
 npm run build
-npm start
 ```
+
+The static files land in `out/`.
 
 ## Artwork
 
