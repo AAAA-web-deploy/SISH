@@ -30,33 +30,32 @@ export function SiteHeader() {
         <span className="wordmark">SI, Still Human</span>
       </Link>
 
-      <details className="nav-details">
-        <summary className="menu-button">
-          <span className="sr-only">Menu</span>
-          <span className="menu-bars" aria-hidden="true" />
-        </summary>
-        <nav aria-label="Primary">
-          <Link
-            href="/"
+      <input id="nav-toggle" type="checkbox" className="nav-toggle" />
+      <label htmlFor="nav-toggle" className="menu-button">
+        <span className="sr-only">Menu</span>
+        <span className="menu-bars" aria-hidden="true" />
+      </label>
+      <nav aria-label="Primary">
+        <Link
+          href="/"
+          className="nav-link"
+          aria-current={homeCurrent ? "page" : undefined}
+        >
+          Home
+        </Link>
+        {UNBUILT.map((item) => (
+          <button
+            key={item.label}
+            type="button"
             className="nav-link"
-            aria-current={homeCurrent ? "page" : undefined}
+            disabled
+            title="Placeholder. This page is not available yet."
+            aria-describedby="unbuilt-pages"
           >
-            Home
-          </Link>
-          {UNBUILT.map((item) => (
-            <button
-              key={item.label}
-              type="button"
-              className="nav-link"
-              disabled
-              title="Placeholder. This page is not available yet."
-              aria-describedby="unbuilt-pages"
-            >
-              {item.label}
-            </button>
-          ))}
-        </nav>
-      </details>
+            {item.label}
+          </button>
+        ))}
+      </nav>
       <p id="unbuilt-pages" className="sr-only">
         Placeholder. Story, Token, How to Buy, and Community are not available
         yet.
