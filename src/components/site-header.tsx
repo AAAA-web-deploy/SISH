@@ -3,14 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
-const NAV = [
-  { label: "Home", href: "/" },
-  { label: "Story", href: null },
-  { label: "Token", href: "/token" },
-  { label: "How to Buy", href: null },
-  { label: "Community", href: null },
-] as const;
+import { NAV } from "@/lib/nav";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -61,7 +54,7 @@ export function SiteHeader() {
         )}
       </nav>
       <p id="unbuilt-pages" className="sr-only">
-        Placeholder. Story, How to Buy, and Community are not available yet.
+        Placeholder. How to Buy and Community are not available yet.
       </p>
     </header>
   );

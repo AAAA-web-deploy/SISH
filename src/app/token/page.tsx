@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
@@ -159,17 +160,11 @@ export default function TokenPage() {
             A meme community. No trading signals or promised returns.
           </p>
 
-          <Button
-            type="button"
-            variant="story"
-            size="hero"
-            className="token-story"
-            disabled
-            title="Placeholder. The Story page is not available yet."
-            aria-describedby="unbuilt-pages"
-          >
-            View the Story
-            <span aria-hidden="true">→</span>
+          <Button asChild variant="story" size="hero" className="token-story">
+            <Link href="/story">
+              View the Story
+              <span aria-hidden="true">→</span>
+            </Link>
           </Button>
         </div>
       </div>

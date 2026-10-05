@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const STORIES = [
@@ -39,16 +40,11 @@ export default function HomePage() {
             sizes="100vw"
           />
           <div className="hero-actions">
-            <Button
-              type="button"
-              variant="story"
-              size="hero"
-              disabled
-              title="Placeholder. The Story page is not available yet."
-              aria-describedby="unbuilt-pages"
-            >
-              Explore the Story
-              <span aria-hidden="true">→</span>
+            <Button asChild variant="story" size="hero">
+              <Link href="/story">
+                Explore the Story
+                <span aria-hidden="true">→</span>
+              </Link>
             </Button>
             <Button
               type="button"

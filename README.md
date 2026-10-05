@@ -4,7 +4,7 @@ Website for **SI, Still Human** (`$SISH`).
 
 SuperIntelligence assists. Human experience, intuition, and judgment lead.
 
-Home (`/`) and Token (`/token`) are built. Story, How to Buy, and Community stay in the navigation as placeholders, and those controls are disabled until each page exists.
+Home (`/`), Story (`/story`), and Token (`/token`) are built. How to Buy and Community stay in the navigation as placeholders, and those controls are disabled until each page exists.
 
 ## Preview locally
 
@@ -13,7 +13,7 @@ npm install
 npm run dev
 ```
 
-Open [http://127.0.0.1:4317](http://127.0.0.1:4317). Home is `/`. Token is `/token`.
+Open [http://127.0.0.1:4317](http://127.0.0.1:4317). Home is `/`. Story is `/story`. Token is `/token`.
 
 ## Production build
 
