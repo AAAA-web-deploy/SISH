@@ -136,7 +136,7 @@ export default function StoryPage() {
           className="beat-art"
           src="/images/story/partnership.png"
           width={700}
-          height={365}
+          height={310}
           sizes="(max-width: 800px) 92vw, 54vw"
           alt="The trader writes while SuperIntelligence holds the numbers beside an entry and exit chart."
         />
