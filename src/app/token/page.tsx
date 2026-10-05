@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { ContractCopy } from "@/components/contract-copy";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
@@ -8,6 +9,8 @@ export const metadata: Metadata = {
   description:
     "$SISH represents experience, intuition, and independent judgment.",
 };
+
+const CONTRACT_ADDRESS = "To be announced";
 
 const FACTS = [
   {
@@ -181,7 +184,7 @@ export default function TokenPage() {
             ))}
           </ul>
 
-          <div className="token-contract" role="status">
+          <div className="token-contract">
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path
                 d="M7 3.5h7.1L19 8.3V20.5H7V3.5Z"
@@ -198,15 +201,14 @@ export default function TokenPage() {
                 strokeLinecap="round"
               />
             </svg>
-            <p>Contract address — To be announced</p>
+            <p>
+              Contract address — <span>{CONTRACT_ADDRESS}</span>
+            </p>
+            <ContractCopy value={CONTRACT_ADDRESS} />
           </div>
 
           <p className="token-renounced">
             LP burned, Contract ownership renounced.
-          </p>
-
-          <p className="token-note">
-            A meme community. No trading signals or promised returns.
           </p>
 
           <Button asChild variant="story" size="hero" className="token-story">

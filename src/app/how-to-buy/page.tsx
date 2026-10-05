@@ -17,29 +17,36 @@ const CHECKS = ["Official contract", "Correct network", "Fees and slippage"];
 
 function WalletIcon() {
   return (
-    <svg viewBox="0 0 92 52" aria-hidden="true">
-      <rect
-        x="3"
-        y="8"
-        width="86"
-        height="38"
-        rx="9"
+    <svg viewBox="0 0 104 68" aria-hidden="true">
+      <path
+        d="M22 18c1-8 8-12 16-12h26"
         fill="none"
         stroke="currentColor"
-        strokeWidth="2.1"
+        strokeWidth="2.4"
+        strokeLinecap="round"
+      />
+      <rect
+        x="6"
+        y="16"
+        width="92"
+        height="46"
+        rx="10"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2.4"
       />
       <path
-        d="M60 21.5 67.2 29.6 60 32.8 52.8 29.6Z"
+        d="M68 33.2 77.2 43.4 68 47.4 58.8 43.4Z"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.9"
+        strokeWidth="2.2"
         strokeLinejoin="round"
       />
       <path
-        d="M52.8 31 60 34.2 67.2 31 60 42.2Z"
+        d="M58.8 45.2 68 49.2 77.2 45.2 68 58.6Z"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.9"
+        strokeWidth="2.2"
         strokeLinejoin="round"
       />
     </svg>
@@ -48,32 +55,32 @@ function WalletIcon() {
 
 function CoinsIcon() {
   return (
-    <svg viewBox="0 0 84 86" aria-hidden="true">
+    <svg viewBox="0 0 86 90" aria-hidden="true">
       <g
         fill="none"
         stroke="currentColor"
-        strokeWidth="2.1"
+        strokeWidth="2.3"
         strokeLinejoin="round"
       >
-        <ellipse cx="42" cy="13" rx="26" ry="7.2" />
-        <path d="M16 13v10c0 4 11.6 7.2 26 7.2s26-3.2 26-7.2V13" />
-        <ellipse cx="42" cy="38" rx="26" ry="7.2" />
-        <path d="M16 38v10c0 4 11.6 7.2 26 7.2s26-3.2 26-7.2V38" />
-        <ellipse cx="42" cy="63" rx="26" ry="7.2" />
-        <path d="M16 63v10c0 4 11.6 7.2 26 7.2s26-3.2 26-7.2V63" />
+        <ellipse cx="43" cy="16" rx="24" ry="7" />
+        <path d="M19 16v8c0 3.8 10.7 7 24 7s24-3.2 24-7v-8" />
+        <ellipse cx="43" cy="40" rx="24" ry="7" />
+        <path d="M19 40v8c0 3.8 10.7 7 24 7s24-3.2 24-7v-8" />
+        <ellipse cx="43" cy="64" rx="24" ry="7" />
+        <path d="M19 64v8c0 3.8 10.7 7 24 7s24-3.2 24-7v-8" />
       </g>
       <path
-        d="M42 59.2 48.4 66.2 42 69 35.6 66.2Z"
+        d="M43 58.5 49.2 65.2 43 68 36.8 65.2Z"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.8"
+        strokeWidth="2"
         strokeLinejoin="round"
       />
       <path
-        d="M35.6 67.4 42 70.2 48.4 67.4 42 77.4Z"
+        d="M36.8 66.4 43 69.2 49.2 66.4 43 76.2Z"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.8"
+        strokeWidth="2"
         strokeLinejoin="round"
       />
     </svg>

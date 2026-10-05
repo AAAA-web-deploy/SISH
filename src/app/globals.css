@@ -373,10 +373,9 @@ button.nav-link {
     padding: 0.7rem 0.95rem;
   }
 
-  .token.screen .token-renounced,
-  .token.screen .token-note {
-    margin-top: 0.65rem;
-    font-size: 0.95rem;
+  .token.screen .token-renounced {
+    margin-top: 0.75rem;
+    font-size: clamp(1.35rem, 1.7vw, 1.85rem);
   }
 
   .token.screen .token-story {
@@ -414,13 +413,13 @@ button.nav-link {
   }
 
   .buy.screen .buy-icon svg {
-    width: 3.1rem;
-    height: 2.6rem;
+    width: 4.6rem;
+    height: 3.7rem;
   }
 
   .buy.screen .buy-launch .buy-icon svg {
-    width: 2.3rem;
-    height: 2.6rem;
+    width: 3.1rem;
+    height: 3.5rem;
   }
 
   .buy.screen .buy-launch .buy-icon {
@@ -579,6 +578,7 @@ button.nav-link {
 
 .token-contract {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.85rem;
   margin-top: 1.35rem;
@@ -597,23 +597,52 @@ button.nav-link {
 
 .token-contract p {
   margin: 0;
+  flex: 1;
   font-size: 1.02rem;
   font-weight: 500;
   line-height: 1.3;
 }
 
-.token-renounced,
-.token-note {
-  margin: 0.85rem 0 0;
-  color: #d9d3c6;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.35;
+.token-copy-btn {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 0.35rem;
+  margin-left: auto;
+  border: 1px solid rgba(232, 220, 200, 0.5);
+  border-radius: 999px;
+  background: transparent;
+  color: #f6edd8;
+  padding: 0.4rem 0.8rem;
+  font: inherit;
+  font-size: 0.92rem;
+  font-weight: 620;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.token-copy-btn svg {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
+.token-copy-btn:hover {
+  border-color: #ea6829;
+  color: #fff;
+}
+
+.token-copy-btn:focus-visible {
+  outline: 2px solid #ea6829;
+  outline-offset: 3px;
 }
 
 .token-renounced {
-  color: #f3ead8;
-  font-weight: 620;
+  margin: 1rem 0 0;
+  color: #f7f1e4;
+  font-size: clamp(1.45rem, 2vw, 2.05rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 .token-story {
@@ -689,9 +718,11 @@ button.nav-link {
 }
 
 .story-hero {
-  max-height: 40vh;
-  object-fit: cover;
-  object-position: center 18%;
+  width: auto;
+  max-width: 100%;
+  max-height: 42vh;
+  margin-inline: auto;
+  object-fit: contain;
 }
 
 .story-arc {
@@ -701,7 +732,7 @@ button.nav-link {
   justify-content: center;
   gap: 0.45rem 0.8rem;
   margin: 0;
-  padding: 1.35rem var(--gutter) 0.2rem;
+  padding: 0.7rem var(--gutter) 0.1rem;
   color: #f6edd8;
   font-size: clamp(1.05rem, 1.5vw, 1.35rem);
   font-weight: 650;
@@ -715,14 +746,14 @@ button.nav-link {
 
 .beat {
   display: grid;
-  grid-template-columns: minmax(0, 1.12fr) minmax(16rem, 0.88fr);
-  gap: clamp(1.1rem, 2.6vw, 2.6rem);
+  grid-template-columns: minmax(0, 1.05fr) minmax(14rem, 0.95fr);
+  gap: clamp(0.35rem, 0.7vw, 0.7rem);
   align-items: center;
-  padding: clamp(1.6rem, 3.2vw, 2.8rem) var(--gutter);
+  padding: clamp(0.45rem, 0.9vw, 0.8rem) clamp(1.15rem, 4vw, 3.5rem);
 }
 
 .beat-image-right {
-  grid-template-columns: minmax(16rem, 0.88fr) minmax(0, 1.12fr);
+  grid-template-columns: minmax(14rem, 0.95fr) minmax(0, 1.05fr);
 }
 
 .beat-image-left .beat-art {
@@ -862,6 +893,16 @@ button.story-foot-link {
   .beat,
   .beat-image-right {
     grid-template-columns: minmax(0, 1fr);
+    gap: 0.35rem;
+    padding: 0.4rem var(--gutter) 0.3rem;
+  }
+
+  .beat-lede {
+    margin-top: 0.4rem;
+  }
+
+  .exchange {
+    margin-top: 0.5rem;
   }
 
   .beat-image-left .beat-copy,
@@ -1259,8 +1300,8 @@ button.story-foot-link {
   }
 
   .buy.screen .buy-icon svg {
-    width: 1.85rem;
-    height: 1.55rem;
+    width: 2.7rem;
+    height: 2.2rem;
   }
 
   .buy.screen .buy-launch .buy-icon {
