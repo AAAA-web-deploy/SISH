@@ -909,3 +909,71 @@ button.story-foot-link {
     text-align: left;
   }
 }
+
+.community-frame {
+  position: relative;
+}
+
+.community-art {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.community-actions {
+  position: absolute;
+  z-index: 2;
+  top: 44.8%;
+  left: 4.62%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.7rem 0.85rem;
+  max-width: 44%;
+  font-size: clamp(0.78rem, 1.05vw, 1.02rem);
+}
+
+.community-actions svg {
+  width: 1.05em;
+  height: 1.05em;
+  flex: none;
+}
+
+.community-mark {
+  position: absolute;
+  right: 4.4%;
+  bottom: 1.7%;
+  margin: 0;
+  color: #e6dfd4;
+  font-size: clamp(0.7rem, 0.85vw, 0.88rem);
+  font-weight: 520;
+  letter-spacing: 0.01em;
+  line-height: 1;
+}
+
+@media (max-width: 980px) {
+  .community-actions {
+    top: 43.6%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    max-width: 48%;
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .community-actions {
+    position: static;
+    max-width: none;
+    flex-direction: row;
+    padding: 0.95rem var(--gutter) 0.15rem;
+    font-size: 0.92rem;
+  }
+
+  .community-mark {
+    position: static;
+    padding: 0.8rem var(--gutter) 1.4rem;
+    text-align: right;
+  }
+}

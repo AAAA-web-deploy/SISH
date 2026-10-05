@@ -29,33 +29,17 @@ export function SiteHeader() {
         <span className="menu-bars" aria-hidden="true" />
       </label>
       <nav aria-label="Primary">
-        {NAV.map((item) =>
-          item.href ? (
-            <Link
-              key={item.label}
-              href={item.href}
-              className="nav-link"
-              aria-current={pathname === item.href ? "page" : undefined}
-            >
-              {item.label}
-            </Link>
-          ) : (
-            <button
-              key={item.label}
-              type="button"
-              className="nav-link"
-              disabled
-              title="Placeholder. This page is not available yet."
-              aria-describedby="unbuilt-pages"
-            >
-              {item.label}
-            </button>
-          ),
-        )}
+        {NAV.map((item) => (
+          <Link
+            key={item.label}
+            href={item.href}
+            className="nav-link"
+            aria-current={pathname === item.href ? "page" : undefined}
+          >
+            {item.label}
+          </Link>
+        ))}
       </nav>
-      <p id="unbuilt-pages" className="sr-only">
-        Placeholder. Community is not available yet.
-      </p>
     </header>
   );
 }

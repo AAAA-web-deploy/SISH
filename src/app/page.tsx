@@ -46,15 +46,8 @@ export default function HomePage() {
                 <span aria-hidden="true">→</span>
               </Link>
             </Button>
-            <Button
-              type="button"
-              variant="community"
-              size="hero"
-              disabled
-              title="Placeholder. The Community page is not available yet."
-              aria-describedby="unbuilt-pages"
-            >
-              Meet the Community
+            <Button asChild variant="community" size="hero">
+              <Link href="/community">Meet the Community</Link>
             </Button>
           </div>
         </div>

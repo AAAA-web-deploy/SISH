@@ -187,29 +187,16 @@ export default function StoryPage() {
 
       <footer className="story-foot">
         <nav aria-label="Footer">
-          {NAV.map((item) =>
-            item.href ? (
-              <Link
-                key={item.label}
-                href={item.href}
-                className="story-foot-link"
-                aria-current={item.href === "/story" ? "page" : undefined}
-              >
-                {item.label}
-              </Link>
-            ) : (
-              <button
-                key={item.label}
-                type="button"
-                className="story-foot-link"
-                disabled
-                title="Placeholder. This page is not available yet."
-                aria-describedby="unbuilt-pages"
-              >
-                {item.label}
-              </button>
-            ),
-          )}
+          {NAV.map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              className="story-foot-link"
+              aria-current={item.href === "/story" ? "page" : undefined}
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
         <p className="story-tag">
           Same markets.
