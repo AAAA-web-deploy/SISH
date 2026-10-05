@@ -17,36 +17,29 @@ const CHECKS = ["Official contract", "Correct network", "Fees and slippage"];
 
 function WalletIcon() {
   return (
-    <svg viewBox="0 0 76 56" aria-hidden="true">
+    <svg viewBox="0 0 92 52" aria-hidden="true">
       <rect
-        x="5"
-        y="12"
-        width="66"
-        height="36"
-        rx="8"
+        x="3"
+        y="8"
+        width="86"
+        height="38"
+        rx="9"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.8"
+        strokeWidth="2.1"
       />
       <path
-        d="M18 12.2c.4-5.2 4.6-8 10-8h14"
+        d="M60 21.5 67.2 29.6 60 32.8 52.8 29.6Z"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-      />
-      <path
-        d="M51.5 26.4 56.2 31.6 51.5 33.7 46.8 31.6Z"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.45"
+        strokeWidth="1.9"
         strokeLinejoin="round"
       />
       <path
-        d="M46.8 32.6 51.5 34.7 56.2 32.6 51.5 40.2Z"
+        d="M52.8 31 60 34.2 67.2 31 60 42.2Z"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.45"
+        strokeWidth="1.9"
         strokeLinejoin="round"
       />
     </svg>
@@ -55,30 +48,32 @@ function WalletIcon() {
 
 function CoinsIcon() {
   return (
-    <svg viewBox="0 0 72 68" aria-hidden="true">
+    <svg viewBox="0 0 84 86" aria-hidden="true">
       <g
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.7"
+        strokeWidth="2.1"
         strokeLinejoin="round"
       >
-        <ellipse cx="36" cy="14" rx="18" ry="6.2" />
-        <path d="M18 14v8.5c0 3.4 8 6.2 18 6.2s18-2.8 18-6.2V14" />
-        <path d="M18 22.5v8.5c0 3.4 8 6.2 18 6.2s18-2.8 18-6.2v-8.5" />
-        <path d="M18 31v8.5c0 3.4 8 6.2 18 6.2s18-2.8 18-6.2V31" />
+        <ellipse cx="42" cy="13" rx="26" ry="7.2" />
+        <path d="M16 13v10c0 4 11.6 7.2 26 7.2s26-3.2 26-7.2V13" />
+        <ellipse cx="42" cy="38" rx="26" ry="7.2" />
+        <path d="M16 38v10c0 4 11.6 7.2 26 7.2s26-3.2 26-7.2V38" />
+        <ellipse cx="42" cy="63" rx="26" ry="7.2" />
+        <path d="M16 63v10c0 4 11.6 7.2 26 7.2s26-3.2 26-7.2V63" />
       </g>
       <path
-        d="M36 34.2 40.4 39 36 40.9 31.6 39Z"
+        d="M42 59.2 48.4 66.2 42 69 35.6 66.2Z"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.4"
+        strokeWidth="1.8"
         strokeLinejoin="round"
       />
       <path
-        d="M31.6 39.9 36 41.8 40.4 39.9 36 46.6Z"
+        d="M35.6 67.4 42 70.2 48.4 67.4 42 77.4Z"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.4"
+        strokeWidth="1.8"
         strokeLinejoin="round"
       />
     </svg>
@@ -87,48 +82,48 @@ function CoinsIcon() {
 
 function ContractIcon() {
   return (
-    <svg viewBox="0 0 72 68" aria-hidden="true">
+    <svg viewBox="0 0 84 78" aria-hidden="true">
       <path
-        d="M16 8h24l14 14v34a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4V12a4 4 0 0 1 4-4Z"
+        d="M10 6h30l18 18v40a5 5 0 0 1-5 5H10a5 5 0 0 1-5-5V11a5 5 0 0 1 5-5Z"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.7"
+        strokeWidth="2.1"
         strokeLinejoin="round"
       />
       <path
-        d="M40 8v14h14"
+        d="M40 6v18h18"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.7"
+        strokeWidth="2.1"
         strokeLinejoin="round"
       />
       <path
-        d="M22 32h18M22 39h12"
+        d="M18 34h22M18 43h13"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.7"
+        strokeWidth="2.1"
         strokeLinecap="round"
       />
       <circle
-        cx="48"
-        cy="46"
-        r="10"
+        cx="54"
+        cy="52"
+        r="13"
         fill="#03182a"
         stroke="currentColor"
-        strokeWidth="1.7"
+        strokeWidth="2.1"
       />
       <path
-        d="m55.2 53.2 6.2 6.2"
+        d="m63.4 61.4 8.2 8.2"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.7"
+        strokeWidth="2.1"
         strokeLinecap="round"
       />
       <path
-        d="m43.6 46.2 2.8 2.8 5.6-6"
+        d="m47.4 52.2 4 4 7.4-8"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.6"
+        strokeWidth="2.1"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -138,31 +133,31 @@ function ContractIcon() {
 
 function RocketIcon() {
   return (
-    <svg viewBox="0 0 64 72" aria-hidden="true">
+    <svg viewBox="0 0 72 86" aria-hidden="true">
       <path
-        d="M32 4c9 10 12 22 12 34l-12 8-12-8c0-12 3-24 12-34Z"
+        d="M36 3c13 13 16 28 16 42L36 56 20 45c0-14 3-29 16-42Z"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.8"
+        strokeWidth="2.2"
         strokeLinejoin="round"
       />
       <circle
-        cx="32"
-        cy="26"
-        r="4.2"
+        cx="36"
+        cy="28"
+        r="5.4"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.7"
+        strokeWidth="2"
       />
       <path
-        d="M20 38 10 50l10-3M44 38l10 12-10-3"
+        d="M20 43 6 60l14-4.5M52 43l14 17-14-4.5"
         fill="none"
         stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinejoin="round"
+        strokeWidth="2.2"
         strokeLinecap="round"
+        strokeLinejoin="round"
       />
-      <path d="M27.5 48c1.2 5 3 9 4.5 9s3.3-4 4.5-9" fill="#ea6829" />
+      <path d="M29.5 54c1.8 7 4.2 12 6.5 12s4.7-5 6.5-12" fill="#ea6829" />
     </svg>
   );
 }

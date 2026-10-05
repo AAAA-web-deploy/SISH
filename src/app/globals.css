@@ -710,7 +710,7 @@ button.story-foot-link {
 
 .buy-step h2 {
   color: #f6edd8;
-  font-size: clamp(1.02rem, 1.15vw, 1.28rem);
+  font-size: clamp(1.08rem, 1.22vw, 1.38rem);
 }
 
 .buy-icon {
@@ -722,8 +722,8 @@ button.story-foot-link {
 }
 
 .buy-icon svg {
-  width: 4.7rem;
-  height: 4.35rem;
+  width: 6.6rem;
+  height: 5.5rem;
 }
 
 .buy-step p,
@@ -736,7 +736,7 @@ button.story-foot-link {
 
 .buy-step p {
   color: #e8e2d6;
-  font-size: clamp(0.92rem, 0.98vw, 1.02rem);
+  font-size: clamp(0.95rem, 1.02vw, 1.08rem);
 }
 
 .buy-contract {
@@ -762,8 +762,8 @@ button.story-foot-link {
 }
 
 .buy-launch .buy-icon svg {
-  width: 3.35rem;
-  height: 3.7rem;
+  width: 4.15rem;
+  height: 4.85rem;
 }
 
 .buy-launch h2 {
