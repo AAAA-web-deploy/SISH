@@ -251,9 +251,6 @@ export default function HowToBuyPage() {
             </div>
             <div className="buy-icon">{step.icon}</div>
             <p>{step.body}</p>
-            {index === 2 ? (
-              <p className="buy-contract">Official contract — To be announced</p>
-            ) : null}
           </li>
         ))}
         <li className="buy-launch">

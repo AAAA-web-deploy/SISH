@@ -19,6 +19,7 @@ const CHECKS = [
 export default function StoryPage() {
   return (
     <main className="story">
+      <div className="story-sheet">
       <h1 className="sr-only">It knows the patterns. You make the call.</h1>
       <Image
         className="story-hero"
@@ -26,7 +27,8 @@ export default function StoryPage() {
         width={1774}
         height={887}
         priority
-        sizes="100vw"
+        quality={90}
+        sizes="(max-width: 800px) 92vw, 72rem"
         alt="It knows the patterns. You make the call. Two minds. One desk. One mouse. The trader takes the mouse while SuperIntelligence sits beside him."
       />
 
@@ -76,7 +78,8 @@ export default function StoryPage() {
           src="/images/story/challenge.png"
           width={610}
           height={337}
-          sizes="(max-width: 800px) 92vw, 54vw"
+          quality={90}
+          sizes="(max-width: 800px) 92vw, 38rem"
           alt="The trader studies the screens while SuperIntelligence points at a chart."
         />
       </section>
@@ -111,7 +114,8 @@ export default function StoryPage() {
           src="/images/story/reality-check.png"
           width={568}
           height={350}
-          sizes="(max-width: 800px) 92vw, 54vw"
+          quality={90}
+          sizes="(max-width: 800px) 92vw, 38rem"
           alt="SuperIntelligence points to a scenario analysis while the trader holds a note that reads Risk?"
         />
       </section>
@@ -137,7 +141,8 @@ export default function StoryPage() {
           src="/images/story/partnership.png"
           width={700}
           height={310}
-          sizes="(max-width: 800px) 92vw, 54vw"
+          quality={90}
+          sizes="(max-width: 800px) 92vw, 38rem"
           alt="The trader writes while SuperIntelligence holds the numbers beside an entry and exit chart."
         />
       </section>
@@ -171,7 +176,8 @@ export default function StoryPage() {
           src="/images/story/final-call.png"
           width={630}
           height={270}
-          sizes="(max-width: 800px) 92vw, 54vw"
+          quality={90}
+          sizes="(max-width: 800px) 92vw, 38rem"
           alt="The trader takes the mouse. SuperIntelligence holds the analysis and waits."
         />
       </section>
@@ -181,7 +187,8 @@ export default function StoryPage() {
         src="/images/story/closing.png"
         width={970}
         height={287}
-        sizes="100vw"
+        quality={90}
+        sizes="(max-width: 800px) 92vw, 72rem"
         alt="SuperIntelligence assists. Human judgment leads. A billion calculations. Still your call. SI, Still Human. $SISH."
       />
 
@@ -204,6 +211,7 @@ export default function StoryPage() {
           More human.
         </p>
       </footer>
+      </div>
     </main>
   );
 }

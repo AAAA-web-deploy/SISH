@@ -4,7 +4,7 @@ Website for **SI, Still Human** (`$SISH`).
 
 SuperIntelligence assists. Human experience, intuition, and judgment lead.
 
-Home (`/`), Story (`/story`), Token (`/token`), How to Buy (`/how-to-buy`), and Community (`/community`) are built. Social links on Community stay disabled until the official destinations are provided. The How to Buy contract address and purchase link stay disabled until they are provided.
+Home (`/`), Story (`/story`), Token (`/token`), How to Buy (`/how-to-buy`), and Community (`/community`) are built. X opens https://x.com/ and Telegram opens https://t.me/. The How to Buy purchase link stays disabled until it is provided.
 
 ## Preview locally
 

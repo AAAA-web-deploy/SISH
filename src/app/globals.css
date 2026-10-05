@@ -186,6 +186,23 @@ button.nav-link {
   font-size: clamp(0.72rem, 1.18vw, 1.08rem);
 }
 
+.hero-social {
+  position: absolute;
+  z-index: 2;
+  top: 4.2%;
+  right: 3.2%;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.74rem;
+}
+
+.hero-social svg {
+  width: 0.95em;
+  height: 0.95em;
+  flex: none;
+}
+
 .stories {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -251,6 +268,19 @@ button.nav-link {
     font-size: 1rem;
   }
 
+  .hero-social {
+    top: 0.35rem;
+    right: 0.35rem;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.28rem;
+    font-size: 0.64rem;
+  }
+
+  .hero-social a {
+    padding: 0.42em 0.62em;
+  }
+
   .stories {
     grid-template-columns: minmax(0, 1fr);
     max-width: 40rem;
@@ -297,6 +327,10 @@ button.nav-link {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .home .hero-social {
+    font-size: clamp(0.68rem, 1.55cqw, 0.9rem);
   }
 
   .home .stories {
@@ -433,11 +467,6 @@ button.nav-link {
   .buy.screen .buy-launch p,
   .buy.screen .buy-step p {
     font-size: 0.86rem;
-  }
-
-  .buy.screen .buy-contract {
-    margin-top: 0.35rem !important;
-    font-size: 0.78rem !important;
   }
 
   .buy.screen .buy-bar {
@@ -709,20 +738,27 @@ button.nav-link {
   }
 }
 
+.story-sheet {
+  width: min(72rem, calc(100% - clamp(1.5rem, 6vw, 5rem)));
+  margin-inline: auto;
+}
+
 .story-hero,
 .story-close,
 .beat-art {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 1.05rem;
 }
 
 .story-hero {
-  width: auto;
-  max-width: 100%;
-  max-height: 42vh;
-  margin-inline: auto;
+  margin: clamp(1.15rem, 2.2vw, 1.75rem) auto 0;
   object-fit: contain;
+}
+
+.story-close {
+  margin-top: 0.35rem;
 }
 
 .story-arc {
@@ -730,11 +766,11 @@ button.nav-link {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 0.45rem 0.8rem;
+  gap: 0.45rem 0.85rem;
   margin: 0;
-  padding: 0.7rem var(--gutter) 0.1rem;
+  padding: clamp(1.35rem, 2.4vw, 1.9rem) 0 0.15rem;
   color: #f6edd8;
-  font-size: clamp(1.05rem, 1.5vw, 1.35rem);
+  font-size: clamp(1.12rem, 1.5vw, 1.42rem);
   font-weight: 650;
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -746,14 +782,14 @@ button.nav-link {
 
 .beat {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(14rem, 0.95fr);
-  gap: clamp(0.35rem, 0.7vw, 0.7rem);
+  grid-template-columns: minmax(0, 1.12fr) minmax(16rem, 0.88fr);
+  gap: clamp(1.65rem, 3.2vw, 3.15rem);
   align-items: center;
-  padding: clamp(0.45rem, 0.9vw, 0.8rem) clamp(1.15rem, 4vw, 3.5rem);
+  padding: clamp(1.65rem, 2.8vw, 2.55rem) 0;
 }
 
 .beat-image-right {
-  grid-template-columns: minmax(14rem, 0.95fr) minmax(0, 1.05fr);
+  grid-template-columns: minmax(16rem, 0.88fr) minmax(0, 1.12fr);
 }
 
 .beat-image-left .beat-art {
@@ -767,11 +803,11 @@ button.nav-link {
 .beat h2 {
   margin: 0;
   color: #f6edd8;
-  font-size: clamp(2.05rem, 3.5vw, 3.45rem);
+  font-size: clamp(1.85rem, 2.55vw, 2.7rem);
   font-weight: 680;
   letter-spacing: -0.03em;
-  line-height: 0.95;
-  font-variation-settings: "SOFT" 0, "WONK" 0, "opsz" 96;
+  line-height: 1.02;
+  font-variation-settings: "SOFT" 0, "WONK" 0, "opsz" 72;
 }
 
 .hot {
@@ -779,18 +815,18 @@ button.nav-link {
 }
 
 .beat-lede {
-  margin: 0.7rem 0 0;
-  max-width: 18em;
+  margin: 0.8rem 0 0;
+  max-width: 22em;
   color: #f3ead8;
-  font-size: clamp(1.05rem, 1.35vw, 1.28rem);
+  font-size: clamp(1.02rem, 1.15vw, 1.16rem);
   font-weight: 520;
-  line-height: 1.35;
+  line-height: 1.4;
 }
 
 .exchange {
   display: grid;
-  gap: 0.42rem;
-  margin: 1.05rem 0 0;
+  gap: 0.55rem;
+  margin: 1.15rem 0 0;
 }
 
 .exchange p {
@@ -842,7 +878,7 @@ button.nav-link {
   align-items: center;
   justify-content: space-between;
   gap: 1.25rem 2rem;
-  padding: 1.35rem var(--gutter) 2.25rem;
+  padding: 1.6rem 0 2.5rem;
 }
 
 .story-foot nav {
@@ -890,28 +926,51 @@ button.story-foot-link {
 }
 
 @media (max-width: 800px) {
+  .story-sheet {
+    width: min(40rem, calc(100% - 1.5rem));
+  }
+
+  .story-hero {
+    margin-top: 0.85rem;
+    border-radius: 0.8rem;
+  }
+
+  .story-arc {
+    padding-top: 1.05rem;
+    font-size: 1rem;
+  }
+
   .beat,
   .beat-image-right {
     grid-template-columns: minmax(0, 1fr);
-    gap: 0.35rem;
-    padding: 0.4rem var(--gutter) 0.3rem;
+    gap: 0.9rem;
+    padding: 1.35rem 0 1.15rem;
+  }
+
+  .beat h2 {
+    font-size: 1.85rem;
   }
 
   .beat-lede {
-    margin-top: 0.4rem;
+    margin-top: 0.55rem;
   }
 
   .exchange {
-    margin-top: 0.5rem;
+    margin-top: 0.85rem;
   }
 
-  .beat-image-left .beat-copy,
-  .beat-image-right .beat-copy {
-    order: 1;
+  .beat-art,
+  .story-close {
+    border-radius: 0.8rem;
   }
 
   .beat-image-left .beat-art,
   .beat-image-right .beat-art {
+    order: 1;
+  }
+
+  .beat-image-left .beat-copy,
+  .beat-image-right .beat-copy {
     order: 2;
   }
 
@@ -1012,13 +1071,6 @@ button.story-foot-link {
 .buy-step p {
   color: #e8e2d6;
   font-size: clamp(0.95rem, 1.02vw, 1.08rem);
-}
-
-.buy-contract {
-  margin-top: 0.7rem !important;
-  color: #c5d3e2 !important;
-  font-size: 0.88rem !important;
-  font-weight: 600 !important;
 }
 
 .buy-launch {
@@ -1311,11 +1363,6 @@ button.story-foot-link {
   .buy.screen .buy-launch .buy-icon svg {
     width: 1.35rem;
     height: 1.55rem;
-  }
-
-  .buy.screen .buy-contract {
-    margin-top: 0.25rem !important;
-    font-size: 0.64rem !important;
   }
 
   .buy.screen .buy-bar {

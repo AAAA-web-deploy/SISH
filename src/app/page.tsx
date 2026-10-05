@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { SocialLinks } from "@/components/social-links";
 import { Button } from "@/components/ui/button";
 
 const STORIES = [
@@ -39,6 +40,9 @@ export default function HomePage() {
             priority
             sizes="100vw"
           />
+          <div className="hero-social">
+            <SocialLinks />
+          </div>
           <div className="hero-actions">
             <Button asChild variant="story" size="hero">
               <Link href="/story">
