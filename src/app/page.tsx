@@ -41,7 +41,7 @@ export default function HomePage() {
             sizes="100vw"
           />
           <div className="hero-social">
-            <SocialLinks />
+            <SocialLinks marksOnly />
           </div>
           <div className="hero-actions">
             <Button asChild variant="story" size="hero">
