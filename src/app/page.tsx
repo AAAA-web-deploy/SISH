@@ -25,7 +25,7 @@ const STORIES = [
 
 export default function HomePage() {
   return (
-    <main>
+    <main className="home">
       <section className="hero" aria-labelledby="home-title">
         <h1 id="home-title" className="sr-only">
           A billion calculations. Still your call.

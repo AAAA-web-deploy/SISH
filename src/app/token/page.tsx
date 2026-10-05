@@ -21,9 +21,19 @@ const FACTS = [
     icon: "tag",
   },
   {
-    label: "Network:",
-    value: "Ethereum",
-    icon: "ethereum",
+    label: "Total Supply:",
+    value: "1,000,000,000",
+    icon: "supply",
+  },
+  {
+    label: "Buy Tax:",
+    value: "0",
+    icon: "tax",
+  },
+  {
+    label: "Sell Tax:",
+    value: "0",
+    icon: "tax",
   },
 ] as const;
 
@@ -65,21 +75,56 @@ function FactIcon({ name }: { name: (typeof FACTS)[number]["icon"] }) {
     );
   }
 
+  if (name === "supply") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <ellipse
+          cx="12"
+          cy="7"
+          rx="6.2"
+          ry="2.3"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.6"
+        />
+        <path
+          d="M5.8 7v3.3c0 1.3 2.8 2.3 6.2 2.3s6.2-1 6.2-2.3V7"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.6"
+        />
+        <path
+          d="M5.8 10.3v3.4c0 1.3 2.8 2.3 6.2 2.3s6.2-1 6.2-2.3v-3.4"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.6"
+        />
+        <path
+          d="M5.8 13.7V17c0 1.3 2.8 2.3 6.2 2.3s6.2-1 6.2-2.3v-3.3"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.6"
+        />
+      </svg>
+    );
+  }
+
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path
-        d="M12 3.2 5.8 12.1 12 15.1 18.2 12.1 12 3.2Z"
+      <circle
+        cx="12"
+        cy="12"
+        r="7.2"
         fill="none"
         stroke="currentColor"
         strokeWidth="1.6"
-        strokeLinejoin="round"
       />
       <path
-        d="M5.8 13.2 12 20.6 18.2 13.2 12 16.2 5.8 13.2Z"
+        d="M15.6 8.2 8.4 15.8M9.2 9.6h.1M14.6 14.4h.1"
         fill="none"
         stroke="currentColor"
         strokeWidth="1.6"
-        strokeLinejoin="round"
+        strokeLinecap="round"
       />
     </svg>
   );
@@ -87,7 +132,7 @@ function FactIcon({ name }: { name: (typeof FACTS)[number]["icon"] }) {
 
 export default function TokenPage() {
   return (
-    <main className="token">
+    <main className="token screen">
       <div className="token-layout">
         <Image
           className="token-art"
@@ -155,6 +200,10 @@ export default function TokenPage() {
             </svg>
             <p>Contract address — To be announced</p>
           </div>
+
+          <p className="token-renounced">
+            LP burned, Contract ownership renounced.
+          </p>
 
           <p className="token-note">
             A meme community. No trading signals or promised returns.

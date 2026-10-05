@@ -220,7 +220,7 @@ const STEPS = [
 
 export default function HowToBuyPage() {
   return (
-    <main className="buy">
+    <main className="buy screen">
       <h1 className="sr-only">Your wallet. Your decision.</h1>
       <Image
         className="buy-hero"

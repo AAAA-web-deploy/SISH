@@ -45,7 +45,7 @@ function TelegramIcon() {
 
 export default function CommunityPage() {
   return (
-    <main className="community">
+    <main className="community screen">
       <h1 className="sr-only">Bring your brain. Keep your judgment.</h1>
       <div className="community-frame">
         <Image
@@ -67,7 +67,7 @@ export default function CommunityPage() {
             title="Placeholder. The official X link is not available yet."
             aria-describedby="social-placeholders"
           >
-            <XIcon />X — Coming soon
+            <XIcon />X
           </Button>
           <Button
             type="button"
@@ -78,7 +78,7 @@ export default function CommunityPage() {
             aria-describedby="social-placeholders"
           >
             <TelegramIcon />
-            Telegram — Coming soon
+            Telegram
           </Button>
         </div>
         <p className="community-mark">SI, Still Human · $SISH</p>
