@@ -649,3 +649,263 @@ button.story-foot-link {
     text-align: left;
   }
 }
+
+.buy-hero {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.buy-steps {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.42fr);
+  gap: 0.85rem 0.7rem;
+  margin: clamp(0.95rem, 1.7vw, 1.35rem) var(--gutter) 0;
+  padding: 0;
+  list-style: none;
+}
+
+.buy-step,
+.buy-launch {
+  display: flex;
+  flex-direction: column;
+  min-height: 19.5rem;
+  border-radius: 1.15rem;
+}
+
+.buy-step {
+  padding: 1.05rem 0.95rem 1.15rem;
+  border: 1.5px solid rgba(176, 198, 216, 0.42);
+  background: rgba(3, 20, 36, 0.45);
+}
+
+.buy-step-head {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.buy-num {
+  display: grid;
+  place-items: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 50%;
+  background: #3d8cf0;
+  color: #fff;
+  font-size: 1.12rem;
+  font-weight: 680;
+  line-height: 1;
+}
+
+.buy-step h2,
+.buy-launch h2 {
+  margin: 0;
+  font-weight: 680;
+  letter-spacing: -0.025em;
+  line-height: 1.12;
+  font-variation-settings: "SOFT" 0, "WONK" 0, "opsz" 36;
+}
+
+.buy-step h2 {
+  color: #f6edd8;
+  font-size: clamp(1.02rem, 1.15vw, 1.28rem);
+}
+
+.buy-icon {
+  display: grid;
+  flex: 1;
+  place-items: center;
+  margin: 0.55rem 0 0.35rem;
+  color: #f4efe4;
+}
+
+.buy-icon svg {
+  width: 4.7rem;
+  height: 4.35rem;
+}
+
+.buy-step p,
+.buy-launch p {
+  margin: 0;
+  font-weight: 520;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.buy-step p {
+  color: #e8e2d6;
+  font-size: clamp(0.92rem, 0.98vw, 1.02rem);
+}
+
+.buy-contract {
+  margin-top: 0.7rem !important;
+  color: #c5d3e2 !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+}
+
+.buy-launch {
+  justify-content: center;
+  margin-left: 0.55rem;
+  padding: 1.35rem 1.4rem 1.45rem;
+  border: 1px solid rgba(120, 96, 68, 0.28);
+  background: #e6d0b2;
+  text-align: center;
+}
+
+.buy-launch .buy-icon {
+  flex: 0 0 auto;
+  margin: 0 0 0.85rem;
+  color: #2a241c;
+}
+
+.buy-launch .buy-icon svg {
+  width: 3.35rem;
+  height: 3.7rem;
+}
+
+.buy-launch h2 {
+  max-width: 12em;
+  margin-inline: auto;
+  color: #241c16;
+  font-size: clamp(1.28rem, 1.55vw, 1.72rem);
+  line-height: 1.08;
+}
+
+.buy-launch p {
+  max-width: 22em;
+  margin: 0.75rem auto 0;
+  color: #3d342c;
+  font-size: clamp(0.95rem, 1.02vw, 1.05rem);
+}
+
+.buy-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem 0.35rem;
+  margin: 0.95rem var(--gutter) 0;
+  padding-bottom: 1.35rem;
+}
+
+.buy-final {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  color: #6aadec;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.buy-final svg {
+  width: 1.55rem;
+  height: 1.55rem;
+  color: #f3eee6;
+}
+
+.buy-checks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.buy-checks li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0 0.75rem;
+  border-left: 1px solid rgba(232, 226, 214, 0.38);
+  color: #f4f1ea;
+  font-size: 0.98rem;
+  font-weight: 520;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.buy-checks svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex: none;
+}
+
+.buy-rule {
+  flex: 1 1 4rem;
+  height: 1px;
+  min-width: 2.5rem;
+  margin-inline: 0.85rem 1.1rem;
+  background: rgba(232, 226, 214, 0.55);
+}
+
+.buy-sign {
+  margin: 0 0 0 auto;
+  color: #f7f3ea;
+  font-size: 1.45rem;
+  letter-spacing: 0.03em;
+  line-height: 0.86;
+  text-align: right;
+  text-transform: uppercase;
+  transform: rotate(-7deg);
+}
+
+.buy-sign span {
+  display: block;
+}
+
+.buy-sign-line {
+  margin-top: 0.12rem;
+  border-bottom: 3px solid #ea6829;
+  line-height: 0.78;
+}
+
+@media (max-width: 980px) {
+  .buy-steps {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 36rem;
+    margin-inline: auto;
+  }
+
+  .buy-step,
+  .buy-launch {
+    min-height: 0;
+  }
+
+  .buy-launch {
+    margin-left: 0;
+  }
+
+  .buy-icon {
+    margin: 0.85rem 0;
+  }
+
+  .buy-rule {
+    display: none;
+  }
+
+  .buy-checks {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.55rem;
+    width: 100%;
+  }
+
+  .buy-checks li,
+  .buy-checks li:first-child {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .buy-sign {
+    margin: 0.45rem 0 0;
+    text-align: left;
+  }
+}

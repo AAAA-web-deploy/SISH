@@ -54,7 +54,7 @@ export function SiteHeader() {
         )}
       </nav>
       <p id="unbuilt-pages" className="sr-only">
-        Placeholder. How to Buy and Community are not available yet.
+        Placeholder. Community is not available yet.
       </p>
     </header>
   );
