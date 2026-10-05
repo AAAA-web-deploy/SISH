@@ -94,7 +94,8 @@ export default function TokenPage() {
           width={1254}
           height={1254}
           priority
-          sizes="(max-width: 1040px) 92vw, 52vw"
+          quality={90}
+          sizes="(max-width: 1040px) 92vw, 54vw"
           alt="A trader rests his chin on his hand while SuperIntelligence leans on his shoulder. The notebook reads Same Curiosity. Bigger Perspective. The mug reads People Over Panic. The books are Markets, Psychology, Human Behavior, and A Brighter Tomorrow."
         />
 
@@ -115,7 +116,7 @@ export default function TokenPage() {
             />
           </svg>
           <p className="token-lede">
-            $SISH represents experience, intuition,
+            $SISH represents experience, intuition,{" "}
             <br />
             and independent judgment.
           </p>

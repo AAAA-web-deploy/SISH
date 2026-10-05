@@ -265,14 +265,18 @@ button.nav-link {
 }
 
 .token {
-  padding: 0.35rem var(--gutter) clamp(2.5rem, 5vw, 4rem);
+  padding: 0.2rem clamp(1.15rem, 3.2vw, 3.4rem) clamp(2rem, 4vw, 3rem);
 }
 
 .token-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
-  gap: clamp(1.25rem, 3vw, 2.75rem);
-  align-items: center;
+  grid-template-columns: minmax(0, 1.24fr) minmax(18rem, 0.86fr);
+  gap: clamp(0.85rem, 1.8vw, 1.6rem);
+  align-items: start;
+}
+
+.token-copy {
+  padding-top: clamp(1.25rem, 3.2vw, 2.8rem);
 }
 
 .token-art {
@@ -304,7 +308,7 @@ button.nav-link {
 
 .token-lede {
   margin: 0;
-  max-width: 16em;
+  max-width: 18.5em;
   color: #f3ead8;
   font-size: clamp(1.2rem, 1.7vw, 1.7rem);
   font-weight: 560;
@@ -416,6 +420,10 @@ button.nav-link {
     grid-template-columns: minmax(0, 1fr);
     max-width: 44rem;
     margin-inline: auto;
+  }
+
+  .token-copy {
+    padding-top: 0.35rem;
   }
 
   .token-copy h1 {
