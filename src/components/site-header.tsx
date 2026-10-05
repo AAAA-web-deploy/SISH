@@ -4,16 +4,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const UNBUILT = [
-  { label: "Story" },
-  { label: "Token" },
-  { label: "How to Buy" },
-  { label: "Community" },
+const NAV = [
+  { label: "Home", href: "/" },
+  { label: "Story", href: null },
+  { label: "Token", href: "/token" },
+  { label: "How to Buy", href: null },
+  { label: "Community", href: null },
 ] as const;
 
 export function SiteHeader() {
   const pathname = usePathname();
-  const homeCurrent = pathname === "/";
 
   return (
     <header className="site-header">
@@ -36,29 +36,32 @@ export function SiteHeader() {
         <span className="menu-bars" aria-hidden="true" />
       </label>
       <nav aria-label="Primary">
-        <Link
-          href="/"
-          className="nav-link"
-          aria-current={homeCurrent ? "page" : undefined}
-        >
-          Home
-        </Link>
-        {UNBUILT.map((item) => (
-          <button
-            key={item.label}
-            type="button"
-            className="nav-link"
-            disabled
-            title="Placeholder. This page is not available yet."
-            aria-describedby="unbuilt-pages"
-          >
-            {item.label}
-          </button>
-        ))}
+        {NAV.map((item) =>
+          item.href ? (
+            <Link
+              key={item.label}
+              href={item.href}
+              className="nav-link"
+              aria-current={pathname === item.href ? "page" : undefined}
+            >
+              {item.label}
+            </Link>
+          ) : (
+            <button
+              key={item.label}
+              type="button"
+              className="nav-link"
+              disabled
+              title="Placeholder. This page is not available yet."
+              aria-describedby="unbuilt-pages"
+            >
+              {item.label}
+            </button>
+          ),
+        )}
       </nav>
       <p id="unbuilt-pages" className="sr-only">
-        Placeholder. Story, Token, How to Buy, and Community are not available
-        yet.
+        Placeholder. Story, How to Buy, and Community are not available yet.
       </p>
     </header>
   );
