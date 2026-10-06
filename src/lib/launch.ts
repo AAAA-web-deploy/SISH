@@ -9,7 +9,7 @@
  * buyTitle / buyBody — words on that purchase card.
  */
 export const launch = {
-  contractAddress: "Coming Soon...",
+  contractAddress: "0xe6f94f305ce2a00219fd4d476aa79f37304ffe8b",
   xUrl: "https://x.com/si_stillhuman",
   telegramUrl: "https://t.me/sistillhuman",
   buyUrl: "",
