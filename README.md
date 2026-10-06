@@ -4,7 +4,9 @@ Website for **SI, Still Human** (`$SISH`).
 
 SuperIntelligence assists. Human experience, intuition, and judgment lead.
 
-Home (`/`), Story (`/story`), Token (`/token`), How to Buy (`/how-to-buy`), and Community (`/community`) are built. X opens https://x.com/ and Telegram opens https://t.me/. The How to Buy purchase link stays disabled until it is provided.
+Home (`/`), Story (`/story`), Token (`/token`), How to Buy (`/how-to-buy`), and Community (`/community`) are built.
+
+After launch, edit only `src/lib/launch.ts`. That file holds the contract address, the X and Telegram URLs, and the How to Buy purchase URL. Leave `buyUrl` empty until the official purchase link exists. Push the change to `main` and the live site updates.
 
 ## Preview locally
 

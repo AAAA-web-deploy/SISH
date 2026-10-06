@@ -3,14 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ContractCopy } from "@/components/contract-copy";
 import { Button } from "@/components/ui/button";
+import { launch } from "@/lib/launch";
 
 export const metadata: Metadata = {
   title: "Token · SI, Still Human",
   description:
     "$SISH represents experience, intuition, and independent judgment.",
 };
-
-const CONTRACT_ADDRESS = "To be announced";
 
 const FACTS = [
   {
@@ -202,9 +201,9 @@ export default function TokenPage() {
               />
             </svg>
             <p>
-              Contract address — <span>{CONTRACT_ADDRESS}</span>
+              Contract address — <span>{launch.contractAddress}</span>
             </p>
-            <ContractCopy value={CONTRACT_ADDRESS} />
+            <ContractCopy value={launch.contractAddress} />
           </div>
 
           <p className="token-renounced">

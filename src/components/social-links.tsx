@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { launch } from "@/lib/launch";
 
 function XIcon() {
   return (
@@ -36,19 +37,26 @@ function TelegramIcon() {
 }
 
 export function SocialLinks() {
+  const xUrl = launch.xUrl.trim();
+  const telegramUrl = launch.telegramUrl.trim();
+
   return (
     <>
-      <Button asChild variant="community" size="hero">
-        <a href="https://x.com/" target="_blank" rel="noopener noreferrer">
-          <XIcon />X
-        </a>
-      </Button>
-      <Button asChild variant="story" size="hero">
-        <a href="https://t.me/" target="_blank" rel="noopener noreferrer">
-          <TelegramIcon />
-          Telegram
-        </a>
-      </Button>
+      {xUrl ? (
+        <Button asChild variant="community" size="hero">
+          <a href={xUrl} target="_blank" rel="noopener noreferrer">
+            <XIcon />X
+          </a>
+        </Button>
+      ) : null}
+      {telegramUrl ? (
+        <Button asChild variant="story" size="hero">
+          <a href={telegramUrl} target="_blank" rel="noopener noreferrer">
+            <TelegramIcon />
+            Telegram
+          </a>
+        </Button>
+      ) : null}
     </>
   );
 }

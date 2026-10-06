@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Caveat } from "next/font/google";
 import Image from "next/image";
+import { launch } from "@/lib/launch";
 
 const hand = Caveat({
   subsets: ["latin"],
@@ -225,6 +226,40 @@ const STEPS = [
   },
 ] as const;
 
+function PurchaseCard() {
+  const buyUrl = launch.buyUrl.trim();
+  const body = (
+    <>
+      <div className="buy-icon">
+        <RocketIcon />
+      </div>
+      <h2>{launch.buyTitle}</h2>
+      <p>{launch.buyBody}</p>
+      {buyUrl ? null : (
+        <p className="sr-only">
+          Purchase actions are disabled until the official contract and
+          purchase link are confirmed.
+        </p>
+      )}
+    </>
+  );
+
+  if (!buyUrl) {
+    return body;
+  }
+
+  return (
+    <a
+      className="buy-launch-link"
+      href={buyUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {body}
+    </a>
+  );
+}
+
 export default function HowToBuyPage() {
   return (
     <main className="buy screen">
@@ -254,18 +289,7 @@ export default function HowToBuyPage() {
           </li>
         ))}
         <li className="buy-launch">
-          <div className="buy-icon">
-            <RocketIcon />
-          </div>
-          <h2>Purchase links will appear after launch.</h2>
-          <p>
-            The official links to buy $SISH will be shared here once the token
-            is live.
-          </p>
-          <p className="sr-only">
-            Purchase actions are disabled until the official contract and
-            purchase link are confirmed.
-          </p>
+          <PurchaseCard />
         </li>
       </ol>
 
