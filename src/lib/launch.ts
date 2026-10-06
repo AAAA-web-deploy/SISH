@@ -10,7 +10,7 @@
  */
 export const launch = {
   contractAddress: "Coming Soon...",
-  xUrl: "https://x.com/",
+  xUrl: "https://x.com/si_stillhuman",
   telegramUrl: "https://t.me/sistillhuman",
   buyUrl: "",
   buyTitle: "Purchase links will appear after launch.",
